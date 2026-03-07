@@ -1,24 +1,45 @@
-# faers-adverse-event-nlp
 # 💊 Drug Adverse Event Detection — NLP on FDA FAERS Data
 
-![Python](https://img.shields.io/badge/Python-3.9-blue)
-![AUC](https://img.shields.io/badge/AUC-0.89-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=flat-square)
+![AUC](https://img.shields.io/badge/AUC--ROC-0.89-brightgreen?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
-NLP pipeline to classify adverse event report seriousness using FAERS-style data.
+NLP pipeline to classify adverse event report seriousness from FDA FAERS data. Achieved **AUC 0.89**.
 
-## Results
-- **AUC-ROC: 0.89**
-- Processed 5,000+ adverse event records
-- TF-IDF + Logistic Regression pipeline
+---
 
-## Screenshots
+## 📊 Results
+
+### ROC Curve
 ![ROC Curve](images/roc_curve.png)
-![Confusion Matrix](images/confusion_matrix.png)
-![Events by Drug](images/events_by_drug.png)
-![Events Over Time](images/events_by_system_quarter.png)
-![Top NLP Features](images/top_nlp_features.png)
 
-## Run
+### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Serious Event Rate by Drug
+![Events by Drug](images/events_by_drug.png)
+
+### Serious Events — Quarterly Trend
+![Quarterly](images/events_quarterly.png)
+
+### Body System × Drug Heatmap
+![Heatmap](images/heatmap.png)
+
+### NLP Feature Importance
+![NLP Features](images/nlp_features.png)
+
+---
+
+## 🛠️ Tech Stack
+| Category | Tools |
+|----------|-------|
+| NLP | TF-IDF, Logistic Regression, scikit-learn |
+| Data | Pandas, NumPy |
+| Visualisation | Matplotlib |
+
+## 🚀 How to Run
 ```bash
+git clone https://github.com/omiiii274/faers-adverse-event-nlp.git
+cd faers-adverse-event-nlp
 pip install -r requirements.txt
-python main.py
+python build.py
